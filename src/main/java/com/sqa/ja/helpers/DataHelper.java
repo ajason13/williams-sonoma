@@ -9,7 +9,7 @@ import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.*;
 
-import com.sqa.ja.enums.*;
+import com.sqa.ja.helpers.enums.*;
 import com.sqa.ja.helpers.exceptions.*;
 
 /**
