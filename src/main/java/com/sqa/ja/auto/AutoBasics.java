@@ -7,8 +7,10 @@
  */
 package com.sqa.ja.auto;
 
+import java.io.*;
 import java.util.NoSuchElementException;
 
+import org.apache.commons.io.*;
 import org.apache.log4j.*;
 import org.openqa.selenium.*;
 
@@ -17,7 +19,7 @@ import org.openqa.selenium.*;
  * <p>
  * //ADDD (description of core fields)
  * <p>
- * //ADDD (description of core methods)
+ * //ADDD (description of core methods) all static methods
  *
  * @author Alvarez, Jason
  * @version 1.0.0
@@ -33,5 +35,16 @@ public class AutoBasics {
 			logger.warn("Element was not found: " + by);
 			return false;
 		}
+	}
+
+	public static boolean takeScreenshot(String fileLocation, String fileName, WebDriver driver, Logger logger) {
+		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(srcFile, new File(fileLocation + "/" + fileName + ".png"));
+		} catch (IOException e) {
+			logger.warn("Screenshot " + fileName + " was not captured to disk correctly.");
+			return false;
+		}
+		return true;
 	}
 }

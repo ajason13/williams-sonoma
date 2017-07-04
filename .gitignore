@@ -218,4 +218,9 @@ $RECYCLE.BIN/
 # Documentation
 /test-output
 
+# Anything Adactin related
+screenshots/
+adactin/
+Adactin*.java
+
 # End of https://www.gitignore.io/api/osx,java,maven,eclipse,windows,netbeans,intellij
