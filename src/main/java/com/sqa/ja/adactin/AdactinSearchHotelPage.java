@@ -89,6 +89,12 @@ public class AdactinSearchHotelPage extends BasicPage {
 		return this.date;
 	}
 
+	public SearchHotelsResultsPage searchForHotels(String... data) {
+		fillSearchHotelForm();
+		clickOnSearchButton();
+		return new SearchHotelsResultsPage(this.getRelTest());
+	}
+
 	public void setDate(String checkinDate, String checkoutDate) {
 		this.checkinDateField.clear();
 		this.checkinDateField.sendKeys(checkinDate);

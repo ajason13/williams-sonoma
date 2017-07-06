@@ -10,8 +10,6 @@ package com.sqa.ja.auto;
 import org.apache.log4j.*;
 import org.openqa.selenium.*;
 
-import com.sqa.ja.adactin.*;
-
 /**
  * Core //ADDD (description of class)
  * <p>
@@ -75,6 +73,18 @@ public class Core {
 		return this.log;
 	}
 
+	public String getProp(String propName) {
+		return AutoBasics.getProp(propName, "src/main/resources/", "config.properties", getLog());
+	}
+
+	/**
+	 * @return the relTest
+	 */
+	public BasicTest getRelTest() {
+		return this.relTest;
+	}
+
+	// For Pop Ups
 	public boolean isPresent(By by) {
 		return AutoBasics.isElementPresent(getDriver(), by, getLog());
 	}
@@ -85,6 +95,14 @@ public class Core {
 	 */
 	public void setDriver(WebDriver driver) {
 		this.driver = driver;
+	}
+
+	/**
+	 * @param relTest
+	 *            the relTest to set
+	 */
+	public void setRelTest(BasicTest relTest) {
+		this.relTest = relTest;
 	}
 
 	public boolean takeScreenshot() {

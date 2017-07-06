@@ -42,4 +42,10 @@ public class AdactinTC102B extends BasicTest {
 		searchPage.clickOnSearchButton();
 		this.takeScreenshot("TC-102B");
 	}
+	// @Test
+	// public void sampleTest() {
+	// System.out.println("Adactin Test Login (TC-102B)");
+	// BasicPage resultsPage = new
+	// AdactinHomePage(this).login("user","pass").searchForHotels("data");
+	// }
 }

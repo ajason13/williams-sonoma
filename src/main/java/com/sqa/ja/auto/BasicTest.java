@@ -7,8 +7,6 @@ import org.openqa.selenium.firefox.*;
 import org.openqa.selenium.ie.*;
 import org.testng.annotations.*;
 
-import com.sqa.ja.auto.*;
-
 public class BasicTest extends Core {
 
 	/**
@@ -19,7 +17,7 @@ public class BasicTest extends Core {
 		super(baseUrl);
 	}
 
-	@BeforeClass(enabled = true)
+	@BeforeClass(enabled = false)
 	public void setUpChrome() throws Exception {
 		System.out.println("Setup Chrome");
 		// Set system property to use Chrome driver
@@ -35,7 +33,7 @@ public class BasicTest extends Core {
 		getDriver().get(getBaseURL());
 	}
 
-	@BeforeClass(enabled = false)
+	@BeforeClass(enabled = true)
 	public void setUpFirefox() throws Exception {
 		System.out.println("Setup Firefox");
 		// Setup the driver to use Firefox

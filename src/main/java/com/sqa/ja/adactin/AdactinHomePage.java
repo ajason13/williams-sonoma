@@ -10,7 +10,6 @@ package com.sqa.ja.adactin;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
 
-import com.sqa.ja.adactin.*;
 import com.sqa.ja.auto.*;
 
 /**
@@ -42,11 +41,12 @@ public class AdactinHomePage extends BasicPage {
 		super(test);
 	}
 
-	public void login(String username, String password) {
+	public AdactinSearchHotelPage login(String username, String password) {
 		this.usernameField.clear();
 		this.usernameField.sendKeys(username);
 		this.passwordField.clear();
 		this.passwordField.sendKeys(password);
 		this.loginButton.click();
+		return new AdactinSearchHotelPage(this.getRelTest());
 	}
 }

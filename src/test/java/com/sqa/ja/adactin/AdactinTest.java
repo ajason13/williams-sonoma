@@ -65,14 +65,21 @@ public class AdactinTest extends AbstractLoginTest {
 		return temp;
 	}
 
+	// EDIT LATER FOR XPATH OR CSS
 	public Select createSelect(String id) {
 		return new Select(createWebElement(id));
 	}
 
-	public WebElement createWebElement(String id) {
-		if (this.isPresent(By.id(id))) {
-			return getDriver().findElement(By.id(id));
-		}
+	// EDIT LATER FOR XPATH OR CSS
+	// Pass id, xpath, or css
+	public WebElement createWebElement(String... elementArray) {
+		for (String element : elementArray)
+			if (this.isPresent(By.id(element))) {
+				return getDriver().findElement(By.id(element));
+			} else {
+				return getDriver().findElement(By.xpath(element));
+			}
+		// GET SOME CODE TO HOW TO CHECK FOR CORRECT CSS SELECTOR
 		return null;
 	}
 
