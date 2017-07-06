@@ -10,8 +10,6 @@ package com.sqa.ja.auto;
 import org.apache.log4j.*;
 import org.openqa.selenium.*;
 
-import com.sqa.ja.adactin.*;
-
 /**
  * Core //ADDD (description of class)
  * <p>
@@ -73,6 +71,10 @@ public class Core {
 
 	public Logger getLog() {
 		return this.log;
+	}
+
+	public String getProp(String propName) {
+		return AutoBasics.getProp(propName, "src/main/resources/", "config.properties", getLog());
 	}
 
 	public boolean isPresent(By by) {

@@ -7,7 +7,6 @@
  */
 package com.sqa.ja.helpers;
 
-import com.sqa.ja.adactin.*;
 import com.sqa.ja.auto.*;
 
 /**

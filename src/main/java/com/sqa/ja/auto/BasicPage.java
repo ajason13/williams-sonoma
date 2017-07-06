@@ -11,8 +11,6 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.ui.*;
 
-import com.sqa.ja.adactin.*;
-
 /**
  * BasicPaige //ADDD (description of class)
  * <p>
