@@ -1,7 +1,6 @@
-# Basic Project
-## Basic Project Structure
+# Williams-Sonoma
 
-*Default Structure for A Basic Project*
+*Creating test cases for Williams-Sonoma using different Data Providers*
 
 **Java 8**
 
