@@ -10,6 +10,8 @@ package com.sqa.ja.auto;
 import org.apache.log4j.*;
 import org.openqa.selenium.*;
 
+import com.sqa.ja.helpers.*;
+
 /**
  * Core //ADDD (description of class)
  * <p>
